@@ -36,6 +36,7 @@ def result(request):
     r=sendMailHost(Details,hostEmail)
     sendSMSHost(Details,hostPhone)
     #sending visitor email upon checkout
+    sendSMSVisitor(Details,visitorPhone)
     sendMailVisitor(Details,visitorCheckOut,visitorEmail)
 
     #return render(request,'response.html',{"r":r})
@@ -50,12 +51,12 @@ def sendSMSHost(Details,hostPhone):
     zerosms.sms(phno=phonenum,passwd=password,message=Details,receivernum=hostPhone)
 
 
-def sendSMSVisitor(Details,hostPhone):
+def sendSMSVisitor(Details,visitorPhone):
     #here we need to have an account on zerosms to send 
     #credentials of the account required
     #phone number
     #password
-    zerosms.sms(phno=phonenum,passwd=password,set_time=visitorCheckOut,set_date=datetime.date.today(),message=Details,receivernum=hostPhone)
+    zerosms.sms(phno=phonenum,passwd=password,set_time=visitorCheckOut,set_date=datetime.date.today(),message=Details,receivernum=visitorPhone)
 
 def sendMailVisitor(Details,visitorCheckOut,visitorEmail):
     unix=int(time.time())
