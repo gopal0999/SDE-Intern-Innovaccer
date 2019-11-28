@@ -24,3 +24,11 @@ Project Structure:
 
 In the above project structure in settings.py we need to put in host email details for send_email to work
 Also we need zerosms account credentials for sms to work.
+
+Requirements:
+1.zerosms package
+2.python3
+3.django(latest version)
+
+Also we will need to setup host email so that it allows emails to be sent.
+
