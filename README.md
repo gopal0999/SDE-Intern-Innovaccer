@@ -1,4 +1,4 @@
-# SDE-Intern-Innovaccer
+# Sending-Mail-in-django_Using-Gmail
 Project Structure:
 
 [summergeek]/                  <- project root
